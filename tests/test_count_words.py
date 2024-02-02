@@ -25,5 +25,8 @@ def test_given_apostrophes_to_ignore_and_return_number_as_if_separate_word():
 def test_given_punctuation_in_between_words_to_ignore_those_and_return_count_as_if_not_present():
     assert count_words("He waited ... and there was no response") == 7
 
+
+#test given that there are multiple spaces and return the words as if they are not present
+    
 def test_given_multiple_spaces_return_count_as_if_not_present():
     assert count_words("He waited  and there was no response") == 7
