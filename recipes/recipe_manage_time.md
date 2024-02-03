@@ -27,7 +27,7 @@ def time_to_read(text):
 
 
     Returns: (state the return value and its type)
-        a string with the number of minutes and seconds (e.g. ["It will take you 4 minutes and 30 seconds to read this text assuming I can read 200 words per minute"])
+        a string with the number of minutes and seconds (e.g. ["It will take you 0h 4m and 30s to read this text assuming I can read 200 words per minute"])
 
     Side effects: (state any side effects)
         This function doesn't print anything or have any other side-effects
@@ -45,16 +45,16 @@ _Make a list of examples of what the function will take and return._
 """
 Given a text containing only alphabets, it outputs a string that includes the time it takes to read the text
 """
-time_to_read("hello WORLD love you!") => "It will take approximately 0m and 1s to read this text assuming I can read 200 words a minute"
+time_to_read("hello WORLD love you!") => "It will take approximately 0h 0m and 1s to read this text assuming I can read 200 words a minute"
 
 """
 Given a mix of words in the text to include both numerical information it will consider it and will outpiut the string to say how long it will take to read
 """
-time_to_read("I was 30 years old yesterday") => "It will take approximately 0m 8s to read this text assuming I can read 200 words a minute"
+time_to_read("I was 30 years old yesterday") => "It will take approximately 0h 0m 8s to read this text assuming I can read 200 words a minute"
 """
 Test that it will include individual punctuation & in the middle of the text and count those as words
 """
-time_to_read("hello & goodbye, world") => "It will take approximately 0m 6s to read this text assuming I can read 200 words a minute"
+time_to_read("hello & goodbye, world") => "It will take approximately 0h 0m 6s to read this text assuming I can read 200 words a minute"
 
 """
 Given that there is numbers and punctuation together, it will only count it as one word
@@ -70,7 +70,7 @@ time_to_read("") => "It will take approximately 0m 0s to read this text assuming
 """
 Given a really long bit of text it will return a string that says it will take minutes and seconds also!
 """
-time_to_read("bla..bla...bla...blaa ") => "It will take approximately 1m 2s to read this text assuming I can read 200 words a minute"
+time_to_read("bla..bla...bla...blaa ") [words = 16350] => "It will take approximately 1h 21m 45s to read this text assuming I can read 200 words a minute"
 
 """
 
